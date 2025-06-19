@@ -23,7 +23,7 @@ RUN jlink \
     --no-man-pages \
     --output /custom-jre
 
-FROM debian:stretch-slim
+FROM gcr.io/distroless/base-debian12
 
 ENV JAVA_HOME=/opt/java/jre
 ENV PATH="$JAVA_HOME/bin:$PATH"
